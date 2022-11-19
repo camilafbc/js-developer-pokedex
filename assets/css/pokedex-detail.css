@@ -9,7 +9,6 @@
 
 .card {
     width: 90vw;
-    height: 100vh;
     margin: 0.94rem 0rem;
     display: flex;
     flex-direction: column;
@@ -161,5 +160,11 @@ hr {
         width: 600px;
     }
     
+}
+
+@media (max-width: 1440px) and (min-width: 1025px){
+    .card{
+        width: 800px;
+    }
 }
 
