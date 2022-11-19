@@ -1,4 +1,8 @@
-# Pokedex
+# 🕹 Pokedex
+
+<p>
+  <img width="800px" src="https://raw.githubusercontent.com/camilafbc/js-developer-pokedex/main/assets/to-readme.png">
+</p>
 
 O projeto faz parte do Bootcamp "Orange Tech +" fornecido pelo Inter em parceria com a DIO. O projeto consiste na construção de uma página através do consumo de uma [API REST](https://pokeapi.co/) para a criação e personalização de uma Pokedex.
 
