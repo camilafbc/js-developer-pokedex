@@ -1,24 +1,61 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+*{
+    font-family: 'Roboto Slab', serif;
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #f0f8ff;
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+/* HEADER */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(197, 42, 42);
+    padding: 0.9rem;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.8rem;
 }
+
+.header-img {
+    height: 1.56rem;
+    margin-right: 0.125rem;
+}
+
+.header-text {
+    color: whitesmoke;
+    font-size: 1.56rem;
+}
+
+/* THEMES */
+
+#themeBtn {
+    border:none;
+    cursor: pointer;
+    padding: 0.125rem 1.25rem;
+    background-color: transparent;
+}
+
+#themeBtn:hover {
+    opacity: 0.6;
+}
+
+.is-light-theme {
+    background-color: #f0f8ff;
+    color: #000;
+}
+
+.is-dark-theme {
+    background-color: #383838;
+    color: #f0f8ff;
+}
+
+

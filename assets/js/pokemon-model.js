@@ -1,8 +1,15 @@
-
 class Pokemon {
-    number;
     name;
+    number;
+    image;
     type;
     types = [];
-    photo;
+    weight;
+    height;
+    hp;
+    attack;
+    defense;
+    specialAttack;
+    specialDefense;
+    speed;
 }
