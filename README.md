@@ -8,6 +8,6 @@ O resultado do projeto pode ser visto [AQUI](https://camilafbc.github.io/js-deve
 
 ### Modificações realizadas:
 
-* Inserção de temas claro/escuro e armazenamento da seleção feita pelo usuário;
+* Inserção de tema claro/escuro e armazenamento da seleção feita pelo usuário;
 * Card com alguns detalhes dos pokemons;
 * Modificação do layout;
