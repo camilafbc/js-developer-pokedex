@@ -13,3 +13,5 @@ class Pokemon {
     specialDefense;
     speed;
 }
+
+export { Pokemon }

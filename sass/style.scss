@@ -1,5 +1,7 @@
 @import 'backgrounds.scss';
 
+@import 'fade-modal.scss';
+
 .header {
     display: flex;
     align-items: center;
@@ -9,6 +11,8 @@
 
     button {
         margin-right: 20px;
+        border: none;
+        background-color: transparent;
     }
 }
 

@@ -1,25 +1,82 @@
-const pokemonDetail = document.getElementById('pokemon-detail-content');
-const urlParams = new URLSearchParams(window.location.search);
-const pokemonID = urlParams.get("id");
-const idDetails = pokemonID - 1
+import { pokeApi } from "./poke-api.js";
 
-pokeApi.getPokemons(idDetails, 1)
-    .then((pokemons = []) => {
-    pokemonDetail.innerHTML += pokemons.map(convertPokemonDetailToCard)
-})
+const pokemonDetail = document.getElementById('modal');
+// const urlParams = new URLSearchParams(window.location.search);
+// const pokemonID = card.getAttribute('id');
+// console.log(pokemonID)
+// const idDetails = pokemonID - 1
+// const pokemons_card = document.querySelectorAll(".pokemon-card")
+
+const fade = document.querySelector("#fade")
+const modal = document.querySelector("#modal")
+
+setTimeout(() => {
+    const pokemons_card = document.querySelectorAll(".pokemon-card");
+    console.log(pokemons_card)
+  
+    function openModal(event) {
+        const card = event.currentTarget;
+        const pokemonId = card.getAttribute('id');
+        const idDetails = pokemonId - 1
+        
+        console.log("Chamou open modal")
+        console.log("Id dentro do open " + pokemonId)
+
+        pokeApi.getPokemons(idDetails, 1)
+        .then((pokemons = []) => {
+        pokemonDetail.innerHTML += pokemons.map(convertPokemonDetailToCard)
+        })
+
+        toggleModal()
+    }
+  
+    pokemons_card.forEach((card) => {
+      card.addEventListener('click', openModal);
+    });
+  }, 1000 * 5); // Aguarda 1 segundo antes de executar o código
+  
+  function toggleModal(){
+    [fade, modal].forEach((element => {
+        element.classList.toggle("hide")
+    }))
+}
+
+fade.addEventListener('click', toggleModal)
+
+// function openModal(event){
+//     const card = event.currentTarget;
+//     const pokemonId = card.getAttribute('id');
+//     const idDetails = pokemonId - 1
+    
+//     console.log("Chamou open modal")
+
+//     pokeApi.getPokemons(idDetails, 1)
+//     .then((pokemons = []) => {
+//     pokemonDetail.innerHTML += pokemons.map(convertPokemonDetailToCard)
+// }) 
+// }
+
+// pokemons_card.forEach((cd) => {
+//     cd.addEventListener('click', console.log("click"))
+// })
+
+
+
+
 
 
 
 function convertPokemonDetailToCard(pokeDetail){
-    return `  
-    <div class="card" id="card">
+    return ` 
+
+        <div class="card" id="card">
                 <div class="card-detail ${pokeDetail.type}">
                     <button type="button" class="backBtn" onclick="backPage()"><img src="assets/img/icons8-à-esquerda-dentro-de-um-círculo-24.png" alt=""></button>
                     <span class="card-detail-number ${pokeDetail.type}">#0${pokeDetail.number}</span>
                     <img class="card-detail-img" src=${pokeDetail.image} alt="">
                     <span class="card-main-detail-name ${pokeDetail.type}">${pokeDetail.name}</span>
                 </div>
-            
+
 
             <div class="card-detail-data class="is-light-theme">
                 
@@ -38,7 +95,7 @@ function convertPokemonDetailToCard(pokeDetail){
                 </div>
                 <ol class="card-detail-list">
                     <hr>
-                   <li class="stat-item">
+                <li class="stat-item">
                         <span class="stat-item-value">${pokeDetail.hp}</span>
                         <span class="stat-item-text">HP</span>
                     </li>
@@ -64,15 +121,17 @@ function convertPokemonDetailToCard(pokeDetail){
                     </li>
                 </ol>
             </div> 
-    </div>
+        </div>  
 `}
 
 
 // Função que retorna para página principal a partir do card de detalhes
 
-function backPage(){
-    window.location.href = "index.html";
-}
+// function backPage(){
+//     window.location.href = "index.html";
+// }
+
+export { convertPokemonDetailToCard }
 
 
 

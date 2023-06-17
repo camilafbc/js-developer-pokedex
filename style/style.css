@@ -3,7 +3,7 @@
 }
 
 .grass {
-  background-color: #52f009;
+  background-color: #40bb07;
 }
 
 .fire {
@@ -70,6 +70,40 @@
   background-color: #f5447f;
 }
 
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: rgba(248, 240, 240, 0.349);
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  z-index: 10;
+}
+
+#fade.hide, #modal.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}
+
+#fade, #modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -79,6 +113,8 @@
 }
 .header button {
   margin-right: 20px;
+  border: none;
+  background-color: transparent;
 }
 
 .header-logo {
