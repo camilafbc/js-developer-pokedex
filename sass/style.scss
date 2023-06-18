@@ -2,6 +2,8 @@
 
 @import 'fade-modal.scss';
 
+@import 'modal-content.scss';
+
 .header {
     display: flex;
     align-items: center;
@@ -54,12 +56,13 @@
 .pokemon {
     width: 12.5rem;
     // height: 250px;
-    border-radius: 0.9rem;
+    border-radius: 0.25rem;
     opacity: 1;
     background-image: url(../assets/img/Untitled\ \(1\).svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 
     .pokemon-card {
         display: flex;
