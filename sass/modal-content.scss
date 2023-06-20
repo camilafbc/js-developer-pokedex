@@ -149,15 +149,18 @@ hr {
 .stat-item-text {
     // text-decoration: overline;
     opacity: 0.8; 
+    width: 58px;
 }
 
 // Teste Barra
 
 .ability-container{
     width: 60%;
-    height: 10px;
-    display: flex;
-    align-items: center;
+    height: 8px;
+    // display: flex;
+    // align-items: center;
+    border-radius: 5px;
+    background-color: #75758b6b;
     // flex-grow: 1;
 }
 
