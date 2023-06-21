@@ -304,6 +304,27 @@ hr {
   background-color: transparent;
 }
 
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+.search-container input[type=text] {
+  border: none;
+  outline: 0;
+  width: 100%;
+  height: 32px;
+  float: left;
+  background-color: transparent;
+}
+.search-container img {
+  width: 25px;
+}
+
 .header-logo {
   display: flex;
   align-items: center;

@@ -2,9 +2,11 @@
 import { pokeApi } from "./poke-api.js";
 import { convertPokemonsToList } from "./convertPokemonsToList.js";
 import { cardListeners } from "./modal.js";
+import { realizarBusca } from "./search.js";
 
-const list = document.getElementById('listPokemons')
-const loadMoreBtn = document.getElementById('loadMoreBtn')
+
+const list = document.getElementById('listPokemons');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
 const limit = 20
 let offset = 0
 const maxRecord = 300
@@ -30,6 +32,15 @@ function loadPokemonItems(offset, limit){
 
 loadPokemonItems(offset, limit)
 
+// Barra de Pesquisa
+const searchBtn = document.getElementById("search-btn")
+const entrada = document.querySelector("input[name='search']")
+
+searchBtn.addEventListener('click', () => {
+    // let entr = Number(entrada.value) - 1
+    realizarBusca(entrada.value)
+    
+})
 
 // Paginação
 

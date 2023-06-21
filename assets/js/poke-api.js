@@ -49,6 +49,14 @@ pokeApi.getPokemons = (offset = 0, limit = 20) => {
             .then((pokemonsDetails) => pokemonsDetails)
 }
 
+pokeApi.getPokemonForName = (nome) => {
+    const url2 = `https://pokeapi.co/api/v2/pokemon/${nome}`
+
+    return fetch(url2)
+            .then((response) => response.json())
+            .then((jsonBody) => convertPokemonApiDetailToPokemon(jsonBody));
+}
+
 export { pokeApi, convertPokemonApiDetailToPokemon }
 
 
