@@ -37,13 +37,11 @@ const searchBtn = document.getElementById("search-btn")
 const entrada = document.querySelector("input[name='search']")
 
 searchBtn.addEventListener('click', () => {
-    // let entr = Number(entrada.value) - 1
     realizarBusca(entrada.value)
-    
 })
 
-// Paginação
 
+// Paginação
 loadMoreBtn.addEventListener('click', () => {
     offset += limit
     const qntRecordNextPage = offset + limit

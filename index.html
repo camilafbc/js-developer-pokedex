@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <link rel="shortcut icon" href="img/icons8-pokeball-windows-11-color-32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/icons8-pokeball-windows-11-color-32.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,11 @@
 
 <body class="">
     <header class="header">
-        <div class="header-logo">
+        <a href="index.html" class="header-logo">
+            <!-- <img src="assets/img/lms-pokedex.png"> -->
             <img class="header-img" src="assets/img/icons8-pokeball-96.png" alt="">
             <h1 class="header-text">POKEDEX</h1>
-        </div>
+        </a>
         <div class="search-container">
             <input type="text" name="search" id="search" placeholder="Pesquisar por nome ou número">
             <img src="assets/img/icons8-pesquisar.svg" alt="" id="search-btn">
@@ -30,7 +31,7 @@
             <img src="assets/img/icons8-sol.svg" alt="">
         </button>
     </header>
-    <section class="content">
+    <section class="content" id="content">
         <ol class="pokemons-list" id="listPokemons">
             <!-- Inserção dinâmica da lista de pokemóns solicitada à API -->
         </ol>
@@ -44,12 +45,9 @@
     <div id="modal" class="hide"></div>
 
     <!-- SCRIPT JS -->
-    <!-- <script src="assets/js/pokemon-model.js"></script>
-    <script src="assets/js/poke-api.js"></script> -->
-    <script src="assets/js/main.js" type="module"></script>
-    <!-- <script src="assets/js/pokemon-detail-card.js" type="module"></script>
-    <script src="assets/js/modal.js" type="module"></script> -->
-    <script src="assets/js/themes.js"></script>
+    
+    <script src="js/main.js" type="module"></script>
+    <script src="js/themes.js"></script>
 </body>
 
 </html>
