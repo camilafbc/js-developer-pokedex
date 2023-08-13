@@ -36,6 +36,7 @@ const searchBtn = document.getElementById("search-btn");
 const entrada = document.querySelector("input[name='search']");
 
 searchBtn.addEventListener("click", () => {
+  if(entrada.value == "") return
   realizarBusca(entrada.value);
 });
 
