@@ -12,5 +12,4 @@ function convertPokemonsToList(pokemon) {
     `
 }
 
-
 export { convertPokemonsToList }

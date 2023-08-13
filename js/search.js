@@ -2,7 +2,19 @@ import { pokeApi } from "./poke-api.js";
 import { convertPokemonsToList } from "./convertPokemonsToList.js";
 import { cardListeners } from "./modal.js";
 
-const list = document.getElementById('content')
+const list = document.getElementById('content');
+
+const createBackBtn = (list) => {
+    const back_btn = document.createElement("button");
+    back_btn.className = "back-btn"
+    back_btn.innerText = "VOLTAR"
+
+    back_btn.addEventListener('click', () => {
+        window.location.href = "/";
+    })
+
+    list.appendChild(back_btn)
+}
 
 function realizarBusca(entrada) {
     // Verifica se a entrada é um número
@@ -13,24 +25,23 @@ function realizarBusca(entrada) {
 
             if(pokemonsList.length == 0){
                 list.innerHTML = `
-                <div class="error-container">
-                    <img src="assets/img/alert.svg" alt="triangulo com uma exclamação">
-                    <div class="error-text">
-                        <p>Pokemón não encontrado!</p>
-                        <span></span>
+                    <div class="error-container">
+                        <img src="assets/img/alert.svg" alt="triangulo com uma exclamação">
+                        <div class="error-text">
+                            <p>Pokemón não encontrado!</p>
+                            <span></span>
+                        </div>
                     </div>
-                </div>
-            `
-            } else {
+                `
+                createBackBtn(list)
 
-            const newList = pokemonsList.map((pokemon) => convertPokemonsToList(pokemon))
-    
-            const newHtml = newList.join('')
-    
-            list.innerHTML = newHtml
-    
-            cardListeners()
-            
+            } else {
+                const newList = pokemonsList.map((pokemon) => convertPokemonsToList(pokemon))
+                const newHtml = newList.join('')
+                
+                list.innerHTML = newHtml
+                createBackBtn(list)
+                cardListeners()
             }
         })
 
@@ -40,7 +51,7 @@ function realizarBusca(entrada) {
             const newList = convertPokemonsToList(Pokemon)
     
             list.innerHTML = newList
-    
+            createBackBtn(list)
             cardListeners()
 
         }).catch((error) => {
@@ -53,8 +64,12 @@ function realizarBusca(entrada) {
                     </div>
                 </div>
             `
+            createBackBtn(list)
         });
     }
+
+    // Espera Carregar os elementos do DOM para poder estilizar o botão
+    document.addEventListener("DOMContentLoaded", createBackBtn(list));
 }
 
 export { realizarBusca }

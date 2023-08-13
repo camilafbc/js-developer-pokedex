@@ -75,14 +75,4 @@ function convertPokemonDetailToCard(pokeDetail){
         </div>  
 `}
 
-
 export { convertPokemonDetailToCard }
-
-
-
-
-
-
-
-
-

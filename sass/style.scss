@@ -1,3 +1,5 @@
+@import 'variaveis.scss';
+
 @import 'backgrounds.scss';
 
 @import 'fade-modal.scss';
@@ -6,16 +8,12 @@
 
 .header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color: red;
-
-    button {
-        margin-right: 20px;
-        border: none;
-        background-color: transparent;
-    }
+    padding: 1.5rem 3.25rem;
+    background-color: $red-color;
 }
 
 .search-container{
@@ -27,10 +25,9 @@
     max-width: 600px;
     padding: 5px;
     border-radius: 5px;
-    background-color: #f5f5f5;
-    // border: 1px solid black;
+    background-color: $white-color;
 
-    input[type="text"]{
+    input[type=text]{
         border: none;
         outline: 0;
         width: 100%;
@@ -49,20 +46,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-left: 20px;
     cursor: pointer;
 
     img {
-        width: 40px;
-        margin-right: 5px;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    }
-
-    h1 {
-        color: #000000;
-        font-weight: 600;
-        font-size: 1.5rem;
+        width: 200px;
     }
 }
 
@@ -79,12 +66,10 @@
     align-items: center;
     max-width: 100vw;
     gap: 7px;
-    // margin-top: 20px;
 }
 
 .pokemon {
     width: 12.5rem;
-    // height: 250px;
     border-radius: 0.25rem;
     opacity: 1;
     background-image: url(../assets/img/Untitled\ \(1\).svg);
@@ -105,55 +90,64 @@
 
         .pokemon-card-number {
             align-self: flex-end;
-            color: #f0f8ff;
+            color: $number-card-color;
             padding: .25rem .5rem;
             margin: .25rem 0;
             font-size: 1rem;
             font-weight: 600;
             border-radius: 1rem;
             filter: brightness(1.1);
-            filter: drop-shadow(2px 4px 6px rgb(43, 42, 42));
+            filter: drop-shadow(2px 4px 6px $shadow-gray-color);
             text-align: center;
         }
 
         img {
             max-width: 100%;
             height: 6.25rem;
-            filter: drop-shadow(2px 4px 6px black);
+            filter: drop-shadow(2px 4px 6px $black-color);
         }
 
         .pokemon-card-name {
             align-self: center;
             text-transform: capitalize;
-            color: #f0f8ff;
+            color: $number-card-color;
             padding: .25rem .5rem;
             margin: .5rem .25rem 0 0;
             font-size: 1rem;
             font-weight: 600;
             border-radius: 1rem;
             text-align: center;
-            filter: drop-shadow(2px 4px 6px rgb(43, 42, 42));
+            filter: drop-shadow(2px 4px 6px $shadow-gray-color);
         }
     }
 }
 
-// Paginação
+// Botões
 
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+}
 
-    button {
-        border: none;
-        background-color: rgb(197, 42, 42);
-        color: black;
-        border-radius: 0.94rem;
-        padding: 0.94rem;
-        opacity: 1;
-        cursor: pointer;
+button, .back-btn {
+    border: none;
+    background-color: $red-color;
+    color: $white-color;
+    font-weight: bold;
+    border-radius: 0.94rem;
+    padding: 0.94rem;
+    cursor: pointer;
+
+    &:hover {
+        transition: 0.25s;
+        transform: scale(0.95);
     }
+}
+
+.back-btn {
+    margin: 3rem 0;
 }
 
 // Error
@@ -176,7 +170,6 @@
         p{
             font-weight: bold;
             font-size: 1.5rem;
-
         }
 
         span{

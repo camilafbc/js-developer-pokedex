@@ -12,24 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body class="">
     <header class="header">
         <a href="index.html" class="header-logo">
-            <!-- <img src="assets/img/lms-pokedex.png"> -->
-            <img class="header-img" src="assets/img/icons8-pokeball-96.png" alt="">
-            <h1 class="header-text">POKEDEX</h1>
+            <img src="assets/img/lms-pokedex.png">
         </a>
         <div class="search-container">
             <input type="text" name="search" id="search" placeholder="Pesquisar por nome ou número">
             <img src="assets/img/icons8-pesquisar.svg" alt="" id="search-btn">
         </div>
-        <button type="button" id="themeBtn">
-            <img src="assets/img/icons8-sol.svg" alt="">
-        </button>
     </header>
     <section class="content" id="content">
         <ol class="pokemons-list" id="listPokemons">
@@ -45,9 +40,7 @@
     <div id="modal" class="hide"></div>
 
     <!-- SCRIPT JS -->
-    
     <script src="js/main.js" type="module"></script>
-    <script src="js/themes.js"></script>
 </body>
 
 </html>

@@ -37,15 +37,13 @@ function toggleModal() {
 }
 
 // Limpa o conteúdo do modal para entrada do próximo
-function clearModal(){
-    modal.innerHTML = ""
+function clearModal() {
+  modal.innerHTML = "";
 }
 
-
 fade.addEventListener("click", () => {
-    toggleModal()
-    clearModal()
+  toggleModal();
+  clearModal();
 });
-
 
 export { openModal, cardListeners, toggleModal };

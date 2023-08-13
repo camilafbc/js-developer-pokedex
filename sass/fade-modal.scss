@@ -19,7 +19,7 @@
     max-height: 100%;
     overflow-y: auto;
     border-radius: 0.25rem;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px $black-color;
 }
 
 #fade.hide, #modal.hide{
