@@ -292,7 +292,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1.5rem 3.25rem;
   background-color: #ff0000;
 }
@@ -439,6 +439,12 @@ button:hover, .back-btn:hover {
 }
 .error-container div span {
   font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .header {
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

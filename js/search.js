@@ -10,7 +10,7 @@ const createBackBtn = (list) => {
     back_btn.innerText = "VOLTAR"
 
     back_btn.addEventListener('click', () => {
-        window.location.href = "/";
+        window.location.href = "https://camilafbc.github.io/js-developer-pokedex/index.html";
     })
 
     list.appendChild(back_btn)
