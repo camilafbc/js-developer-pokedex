@@ -67,9 +67,6 @@ function realizarBusca(entrada) {
             createBackBtn(list)
         });
     }
-
-    // Espera Carregar os elementos do DOM para poder estilizar o botão
-    document.addEventListener("DOMContentLoaded", createBackBtn(list));
 }
 
 export { realizarBusca }
